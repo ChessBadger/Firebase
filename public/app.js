@@ -19,6 +19,11 @@ const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 const database = getDatabase(app);
 
+document.getElementById('imageInput').addEventListener('change', function () {
+  const fileName = this.files[0].name;
+  document.querySelector("label[for='imageInput']").textContent = fileName; // Show selected file name
+});
+
 // Upload image and note
 document.getElementById('uploadButton').addEventListener('click', async function () {
   const file = document.getElementById('imageInput').files[0];
@@ -93,6 +98,7 @@ function displayImages() {
         const formattedDate = formatDate(date);
 
         const dateElement = document.createElement('p');
+        dateElement.className = 'date';
         dateElement.textContent = `Date: ${formattedDate}`;
 
         // Create image element
@@ -157,6 +163,19 @@ function deleteImage(imageKey, imageUrl) {
       console.error('Error deleting image metadata:', error);
     });
 }
+
+document.getElementById('toggleUploadButton').addEventListener('click', function () {
+  const uploadSection = document.getElementById('uploadSection');
+  if (uploadSection.classList.contains('hidden')) {
+    uploadSection.classList.remove('hidden');
+    uploadSection.classList.add('visible');
+    this.textContent = 'Hide Upload Menu';
+  } else {
+    uploadSection.classList.remove('visible');
+    uploadSection.classList.add('hidden');
+    this.textContent = 'Show Upload Menu';
+  }
+});
 
 // Call displayImages when the page loads
 document.addEventListener('DOMContentLoaded', displayImages);

@@ -9,16 +9,27 @@
   </head>
   <body>
     <div class="container">
-      <div id="uploadSection">
-        <input type="file" id="imageInput" />
-        <input type="text" id="imageNote" placeholder="Add a note (optional)" />
-        <input type="date" id="imageDate" placeholder="Choose a date" />
-        <button id="uploadButton">Upload to Firebase</button>
+      <button id="toggleUploadButton">Share a Photo</button>
+      <div id="uploadSection" class="hidden">
+        <h2>Upload Memory</h2>
+        <div class="upload-row">
+          <input type="file" id="imageInput" />
+          <label for="imageInput">Choose Image</label>
+        </div>
+        <div class="upload-row">
+          <input type="text" id="imageNote" placeholder="Add a note (optional)" />
+        </div>
+        <div class="upload-row">
+          <input type="date" id="imageDate" placeholder="Choose a date" />
+        </div>
+        <button id="uploadButton">Upload</button>
       </div>
+
       <div id="gallery">
-        <!-- Images will be displayed here -->
+        <div class="carousel-container"></div>
       </div>
     </div>
     <script type="module" src="app.js"></script>
+    <script src="carousel.js"></script>
   </body>
 </html>

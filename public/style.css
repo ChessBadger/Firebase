@@ -2,39 +2,115 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
   margin: 0;
   padding: 0;
-  background: #121212; /* Dark background */
+  background: #1e1e1e; /* Dark background */
   color: #e0e0e0; /* Light text for readability */
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+/* When visible */
+.visible {
+  display: block;
+}
+
 .container {
   width: 90%;
-  max-width: 600px; /* Adjusted for a slightly wider layout */
-  margin: 20px auto;
+  max-width: 100%; /* Adjusted for a slightly wider layout */
+  margin: 0 auto;
   padding: 20px;
   background: #1e1e1e; /* Darker shade for container */
   box-shadow: none; /* Flat design, no shadow */
-  border: 1px solid #333; /* Subtle border for depth */
+}
+
+button#toggleUploadButton {
+  padding: 10px 20px;
+  margin: 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  /* Additional styles */
 }
 
 #uploadSection {
+  padding: 20px;
+  background: #2a2a2a; /* Different background for emphasis */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px #000; /* Subtle shadow for depth */
   margin-bottom: 40px;
 }
 
+#uploadSection h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.upload-row {
+  margin-bottom: 15px; /* Space between input fields */
+}
+
+input[type='file'] {
+  display: none; /* Hide the default file input */
+}
+
+label[for='imageInput'] {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='date'] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 22px;
+}
+
+button#uploadButton {
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
+  /* rest of the button styling */
+}
+
 #gallery {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  overflow-x: auto;
   gap: 20px;
 }
 
+/* Style for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 20px;
+}
+
 .image-card {
+  flex: 0 0 auto; /* Prevent cards from stretching */
+  margin-right: 20px; /* Space between cards */
+  scroll-snap-align: start; /* Align cards nicely when scrolling */
   border: none; /* Flat design, no border */
   background: #262626; /* Even darker background for contrast */
   color: #e0e0e0; /* Light text color */
+  height: 100%;
 }
 
 .image-card img {
-  max-width: 100%;
+  /* width: 300px;
+  height: 500px; */
+  max-width: 300px;
   max-height: 500px;
   height: auto;
   width: auto;
@@ -45,6 +121,10 @@ body {
 
 .image-card p {
   color: #ccc; /* Lighter text for less important information */
+  /* font-size: 30px; */
+}
+
+p {
   font-size: 30px;
 }
 
@@ -53,6 +133,10 @@ body {
   font-size: 12px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.date {
+  font-size: 20px;
 }
 
 button {
@@ -74,5 +158,9 @@ button:hover {
 @media (min-width: 600px) {
   #gallery {
     grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+  .upload-row,
+  button#uploadButton {
+    width: 100%;
   }
 }

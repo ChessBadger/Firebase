@@ -45,6 +45,10 @@
   box-shadow: 0 0 10px #00f;
 }
 
+.image-card:nth-child(1n) .date {
+  box-shadow: none;
+}
+
 .image-card p {
   width: 80%; /* Adjust the percentage as needed */
   margin: 0 auto; /* Center the paragraph within the card */
