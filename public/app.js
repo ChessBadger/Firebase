@@ -29,6 +29,10 @@ document.getElementById('uploadButton').addEventListener('click', async function
     alert('Please select a file.');
     return;
   }
+  if (!chosenDate) {
+    alert('Please select a date.');
+    return;
+  }
 
   const storageRef = ref(storage, 'images/' + file.name);
   const uploadTask = uploadBytesResumable(storageRef, file);

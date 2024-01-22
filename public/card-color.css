@@ -1,0 +1,51 @@
+/* Define a base style for the image card */
+.image-card {
+  /* Other styles... */
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px transparent;
+}
+
+.image-card:nth-child(1n) {
+  border-color: #f0f;
+  box-shadow: 0 0 10px #f0f;
+}
+
+.image-card:nth-child(1n) p {
+  border-color: #f0f;
+  box-shadow: 0 0 10px #f0f;
+}
+
+.image-card:nth-child(2n) {
+  border-color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.image-card:nth-child(2n) p {
+  border-color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.image-card:nth-child(3n) {
+  border-color: #f00;
+  box-shadow: 0 0 10px #f00;
+}
+
+.image-card:nth-child(3n) p {
+  border-color: #f00;
+  box-shadow: 0 0 10px #f00;
+}
+
+.image-card:nth-child(4n) {
+  border-color: #00f;
+  box-shadow: 0 0 10px #00f;
+}
+
+.image-card:nth-child(4n) p {
+  border-color: #00f;
+  box-shadow: 0 0 10px #00f;
+}
+
+.image-card p {
+  width: 80%; /* Adjust the percentage as needed */
+  margin: 0 auto; /* Center the paragraph within the card */
+}
