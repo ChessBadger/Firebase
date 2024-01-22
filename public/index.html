@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Image Upload to Firebase</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Memory Album</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <input type="file" id="imageInput" />
-    <button id="uploadButton">Upload to Firebase</button>
-
+    <div class="container">
+      <div id="uploadSection">
+        <input type="file" id="imageInput" />
+        <input type="text" id="imageNote" placeholder="Add a note (optional)" />
+        <input type="date" id="imageDate" placeholder="Choose a date" />
+        <button id="uploadButton">Upload to Firebase</button>
+      </div>
+      <div id="gallery">
+        <!-- Images will be displayed here -->
+      </div>
+    </div>
     <script type="module" src="app.js"></script>
   </body>
 </html>

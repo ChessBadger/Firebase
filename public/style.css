@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px; /* Limit max width for larger screens */
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#uploadSection {
+  margin-bottom: 40px;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  gap: 20px;
+}
+
+.image-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.image-card img {
+  max-width: 100%; /* Ensures image is not wider than its container */
+  max-height: 500px; /* Adjust this value as needed */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area, can be adjusted as needed */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.image-card p {
+  color: #333;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.upload-date {
+  color: #555;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Larger screens layout */
+@media (min-width: 600px) {
+  #gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+  }
+}
