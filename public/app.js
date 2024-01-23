@@ -99,7 +99,7 @@ function displayImages() {
 
         const dateElement = document.createElement('p');
         dateElement.className = 'date';
-        dateElement.textContent = `Date: ${formattedDate}`;
+        dateElement.textContent = formattedDate;
 
         // Create image element
         const imageElement = document.createElement('img');

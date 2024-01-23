@@ -45,6 +45,16 @@
   box-shadow: 0 0 10px #00f;
 }
 
+.image-card:nth-child(5n) {
+  border-color: rgb(255, 123, 0);
+  box-shadow: 0 0 10px rgb(255, 123, 0);
+}
+
+.image-card:nth-child(5n) p {
+  border-color: rgb(255, 123, 0);
+  box-shadow: 0 0 10px rgb(255, 123, 0);
+}
+
 .image-card:nth-child(1n) .date {
   box-shadow: none;
 }

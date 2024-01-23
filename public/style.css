@@ -104,24 +104,26 @@ button#uploadButton {
   border: none; /* Flat design, no border */
   background: #262626; /* Even darker background for contrast */
   color: #e0e0e0; /* Light text color */
-  height: 100%;
+  height: auto; /* Adjusted height to auto */
+  /* max-height: 550px;  */
+  height: 75vh;
+  width: 90%;
+  overflow: hidden; /* Hide overflow content */
 }
 
 .image-card img {
-  /* width: 300px;
-  height: 500px; */
-  max-width: 300px;
-  max-height: 500px;
-  height: auto;
-  width: auto;
-  object-fit: cover;
+  max-width: 300px; /* Maximum width */
+  max-height: 70%; /* Maximum height for the image */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without stretching */
   border-radius: 5px; /* Slightly rounded for a modern look */
   margin: 15px 0;
 }
 
 .image-card p {
   color: #ccc; /* Lighter text for less important information */
-  /* font-size: 30px; */
+  max-height: 20%;
 }
 
 p {
@@ -137,6 +139,7 @@ p {
 
 .date {
   font-size: 20px;
+  max-height: 5%;
 }
 
 button {
